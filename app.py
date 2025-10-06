@@ -11,7 +11,7 @@ st.title("🐶🐱 Cat vs Dog Classifier")
 
 # --- Define the Google Drive link ---
 drive_url = "https://drive.google.com/uc?id=1PpUGfLU6_DUEXA_dKp-U6tZopHQT_OP-"
-model_path = "cat_dog_model.h5"
+model_path = "binary_image_classifier_model.keras"
 
 # --- Download the model if it doesn't exist locally ---
 if not os.path.exists(model_path):
