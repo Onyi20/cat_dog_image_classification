@@ -62,3 +62,8 @@ if uploaded_file is not None:
     # --- Show result ---
     st.write(f"✅ **Predicted Class:** {class_names[predicted_class_index]}")
     st.write(f"📊 **Confidence:** {confidence:.4f}")
+    
+     # --- Optional button to clear cache manually ---
+    if st.button("♻️ Clear Cache"):
+        clear_streamlit_cache()
+        st.experimental_rerun()
