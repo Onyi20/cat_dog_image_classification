@@ -43,7 +43,7 @@ uploaded_file = st.file_uploader("Upload an image...", type=["jpg", "jpeg", "png
 
 if uploaded_file is not None:
     # Clear cache when a new image is uploaded
-    clear_streamlit_cache()
+    # clear_streamlit_cache()
 
     # Display uploaded image
     img = Image.open(uploaded_file)
@@ -64,6 +64,7 @@ if uploaded_file is not None:
     st.write(f"📊 **Confidence:** {confidence:.4f}")
     
      # --- Optional button to clear cache manually ---
+     # Button to clear cache manually
     if st.button("♻️ Clear Cache"):
-        clear_streamlit_cache()
-        st.experimental_rerun()
+        st.cache_data.clear()
+        st.cache_resource.clear()
